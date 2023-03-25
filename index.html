@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDN web docs</title>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
+    <link rel="stylesheet" href="wdn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- <script src="wdn.js"></script> -->
+    
+</head>
+
+<body class="body">
+    <div class="header" id="header">
+        <div class="logo">
+            <div class="logo-container">
+                <span id="logo-w" onmouseover="logoAnimation('start')" onmouseleave="logoAnimation('stop')" class="animate__animated  logo-w">W</span><span>wdn</span><span class="no-invert">_</span>
+
+            </div>
+           
+        </div>
+         <div class="menu-btn-container">
+                <i onclick="showMenu()" id="menu-btn" class="fa-regular fa-bars"></i>
+
+            </div>
+        <div class="header-box q-links">
+            <div onclick="toggleDropOnclick('dropdown-ref')" onmouseover="toggleDropdown('dropdown-ref','show')" onmouseleave="toggleDropdown('dropdown-ref','hide')"   class="links"><a href="#">References</a></div>
+             <div class="drop-downs"onmouseover="toggleDropdown('dropdown-ref','show')" onmouseleave="toggleDropdown('dropdown-ref','hide')"  id="dropdown-ref">
+<div class="drop-content" id="reference-1">
+    <span></span>
+    <h3>HTML</h3>
+    <p>Structure of the content on the web</p>
+</div>
+<div class="drop-content" id="reference-2">
+    <span></span>
+    <h3>CSS</h3>
+    <p>Code used to describe document style</p>
+</div>
+<div class="drop-content" id="reference-3">
+    <span></span>
+    <h3>JavaScript</h3>
+    <p>General-purpose scripting language</p>
+</div>
+<div class="drop-content" id="reference-4">
+    <span></span>
+    <h3>HTTP</h3>
+    <p>Prtocol for transmitting web resources</p>
+</div>
+<div class="drop-content" id="reference-5">
+    <span></span>
+    <h3>Web APIs</h3>
+    <p>Interface for building web applications</p>
+</div>
+<div class="drop-content" id="reference-6">
+    <span></span>
+    <h3>Web Extensions</h3>
+    <p>Developing extensions for web browsers</p>
+</div>
+<div class="drop-content" id="reference-7">
+    <span></span>
+    <h3>Web Technology</h3>
+    <p>Web technology reference for developers </p>
+</div>
+    </div>
+            <div onclick="toggleDropOnclick('dropdown-guide')" onmouseover="toggleDropdown('dropdown-guide','show')" onmouseleave="toggleDropdown('dropdown-guide','hide')"  class="links"> <a href="#">Guides</a></div>
+             <div class="drop-downs"  onmouseover="toggleDropdown('dropdown-guide','show')" onmouseleave="toggleDropdown('dropdown-guide','hide')"  id="dropdown-guide">
+        <div class="drop-content" id="guide-1">
+            <span></span>
+            <h3>WDN Learning Area</h3>
+            <p>Learn web Development</p>
+        </div>
+        <div class="drop-content" id="guide-2">
+            <span></span>
+            <h3>HTML</h3>
+            <p>Learn to structure web content with HTML</p>
+        </div>
+        <div class="drop-content" id="guide-3">
+            <span></span>
+            <h3>CSS</h3>
+            <p>Learn to style web content using CSS</p>
+        </div>
+        <div class="drop-content" id="guide-4">
+            <span></span>
+            <h3>JavaScript</h3>
+            <p>Learn to run scripts in the browser</p>
+        </div>
+        <div class="drop-content" id="guide-5">
+            <span></span>
+            <h3>Accessibility</h3>
+            <p>Learn to make the web accessible to all</p>
+        </div>
+    </div>  
+            <div onclick="toggleDropOnclick('dropdown-plus')"  onmouseover="toggleDropdown('dropdown-plus','show')" onmouseleave="toggleDropdown('dropdown-plus','hide')" class="links"> <a href="#">WDN Plus</a></div>
+            <div class="drop-downs"  onmouseover="toggleDropdown('dropdown-plus','show')" onmouseleave="toggleDropdown('dropdown-plus','hide')" id="dropdown-plus">
+        <div class="drop-content" id="wdn-plus-1">
+            <span></span>
+            <h3>Overview</h3>
+            <p>a customized WDN experience</p>
+        </div>
+        <div class="drop-content" id="wdn-plus-2">
+            <span></span>
+            <h3>Updates</h3>
+            <p>All browser compatibility updates at a glance</p>
+        </div>
+        <div class="drop-content" id="wdn-plus-3">
+            <span></span>
+            <h3>Documentation</h3>
+            <p>Learn how to use WDN Plus</p>
+        </div>
+        <div class="drop-content" id="wdn-plus-4">
+            <span></span>
+            <h3>FAQ</h3>
+            <p>Frequently asked quesstions about WDN Plus</p>
+        </div>
+    </div>
+</div>
+
+<div class="drop-down">
+   
+   
+    
+</div>
+        <div class=" header-box icon-container">
+            <div onclick="showTheme()" class="theme" id="theme-btn"><i id="theme-icon" class="fa fa-adjust"></i>Theme</div>
+           
+            <div class="search-container">
+                <input  onclick="expandSearch()" type="text" placeholder="_" name="" id="search-box">
+                <i onclick="collapseSearch()" id="search-close-btn" class="fa-solid fa-xmark"></i> 
+                <i id="search-btn"  onclick="expandSearch()" class="fa fa-search"></i>
+            </div>
+            <div class="theme-box" id="theme-box">
+                <span class="theme-selector"><i class="fa fa-adjust"></i>OS Default</span>
+                <span onclick="setTheme('light')" class="theme-selector" id="light-btn"><i class="fa-solid fa-sun-bright"></i>Light</span>
+                <span onclick="setTheme('dark')" class="theme-selector" id="dark-btn"><i class="fa-solid fa-moon"></i> Dark</span>
+            </div>
+        </div>
+
+        <div class="header-box button-container">
+            <button id="login">Log In</button>
+            <button id="wdn-plus">Get WDN Plus</button>
+        </div>
+    </div>
+    </div>
+    <div  class="home-search" id="home-search">
+        <div class="home-container">
+            <h1>Resources for <span>Developers</span>,
+    by Developers<span >&nbsp;&nbsp;</span></h1>
+        <p>Documenting web technologies, including CSS, HTML, and JavaScript, since 2005.</p>
+        <div class="home-search-container">
+            <input type="text" id="home-search-box">
+            <i id="home-search-btn"   class="fa fa-search"></i>
+
+
+        </div>
+        </div>
+        
+    </div>
+<div class="main-page">
+    <div class="article">
+        <h3>Featured Articles</h3>
+        <div class="article-container">
+
+        
+        <div class="article-box" id="article-box-1"><h4>Web APIs</h4>
+        <h4>Getting started with WebGL</h4>
+        <p>WebGL enables web content to use an API based on OpenGL ES 2.0 to perform 2D and 3D rendering in an HTML canvas in browsers that</p>
+        </div>
+        <div class="article-box" id="article-box-2">
+            <h4>CSS</h4>
+            <h4>CSS Container Queries</h4>
+            <p>Container queries enable you to apply styles to an element based on the size of the element's container. If, for example, a container has less</p>
+        </div>
+        <div class="article-box" id="article-box-3">
+            <h4>Web APIs</h4>
+            <h4>performance API</h4>
+            <p>The Performance API is a group of standards used to measure the performance of web applications.</p>
+        </div>
+        <div class="article-box" id="article-box-4">
+            <h4>CSS</h4>
+            <h4>font-palette</h4>
+            <p>The font-palette CSS property allows specifying one of the many palettes contained in a font that a user agent should use for the font. Users can</p>
+        </div>
+    </div>
+    </div>
+    <div class="news-page" id="news-page">
+        <h3>Latest news</h3>
+        <div class="news-container">
+            <div class="news">
+                <a href="">Experimenting with advertising on WDN</a>
+                <span class="time">12 days ago</span>
+                <a href="">developer.web.org</a>
+            </div>
+            <div class="news">
+                <a href="">A shared and open roadmap for WDN</a>
+                <span class="time">1 month</span>
+                <a href="">blogs.web.org</a>
+            </div>
+            <div class="news">
+                <a href="">Revamp of WDN Web Docs Contribution Docs</a>
+                <span class="time">4 months</span>
+                <a href="">hacks.web.org</a>
+            </div>
+        </div>
+        
+
+    </div>
+    <div class="contribution-page" id="contribution-page">
+        <h3>Recent contributions</h3>
+        <div class="cont-container">
+            <div class="wconts">
+                <a href="">Fixed missing live sample and title</a>
+                <span class="time">a day ago</span>
+                <a href="">WDN/content</a>
+            </div>
+            <div class="wconts">
+                <a href="">{{HTMLRefTable}}マクロの廃止への対応：ベタ書きテーブルに変換</a>
+                <span class="time">a day ago</span>
+                <a href="">WDN/translated-content</a>
+            </div>
+            <div class="wconts">
+                <a href=""> Update api\worker</a>
+                <span class="time">a day ago</span>
+                <a href="">WDN/translated-content</a>
+            </div>
+            <div class="wconts">
+                <a href="">Unification of translation for phrase "ARIA role"</a>
+                <span class="time">a day ago</span>
+                <a href="">WDN/translated-content</a>
+            </div>
+            <div class="wconts">
+                <a href="">Clarified description of arguments to setTimeout</a>
+                <span class="time">a day ago</span>
+                <a href="">WDN/content</a>
+            </div>
+            <div class="wconts">
+                <a href="">Improve yield operator pages</a>
+                <span class="time">a day ago</span>
+                <a href="">WDN/content</a>
+            </div>
+            <div class="wconts">
+                <a href="">Web/API/WebGL_API を更新</a>
+                <span class="time">a day ago</span>
+                <a href="">WDN/translated-content</a>
+            </div>
+            <div class="wconts">
+                <a href="">Glossary/hash を更新</a>
+                <span class="time">a day ago</span>
+                <a href="">WDN/translated-content</a>
+            </div>
+            <div class="wconts">
+                <a href="">Replace .keyCode with .key</a>
+                <span class="time">a day ago</span>
+                <a href="">WDN/content</a>
+            </div>
+            <div class="wconts">
+                <a href="">One `in` is not one inch</a>
+                <span class="time">a day ago</span>
+                <a href="">WDN/content</a>
+            </div>
+
+        </div>
+       
+    </div>
+
+    <div class="cont-spotlight">
+        <div class="spotlight-container">
+             <h3>Contributer Spotlight</h3>
+        <a href="#" class="name">John Doe</a>
+        <p><span>"</span>WDN Web Docs has the most up-to-date and accurate information and the content is presented in an easy-to-understand manner. I also like that it's available in many languages (very important!).</p>
+        <a href="#">Get involved  <i class="fa-solid fa-arrow-right"></i></a>
+        <img src="img/tiled logo.png" alt="">
+        </div>
+       
+    </div>
+    <div class="footer">
+        <div class="footer-one">
+            <div class="logo-col footer-box">
+                <span class="footer-logo">wdn</span>
+                <p>Your blueprint for better internet</p>
+                <div class="social-media"><i class="fa-brands fa-twitter"></i><i class="fa-brands fa-github"></i></div>
+            </div>
+            <div class="about footer-box">
+                <h3>WDN</h3>
+                <ul>
+                    <li>About  </li>  
+                    <li>Hacks Blog</li>
+                    <li>Careers</li>
+                    <li>Advertise with us</li>
+                </ul>
+            </div>
+            <div class="footer-box support">
+                <h3>Support</h3>
+            <ul>
+               <li> Product help  </li>
+               <li> Report an issue</li>
+            </ul>
+            </div>
+            <div class="footer-box communities">
+                <h3>Our communities</h3>
+                <ul>
+                   <li> WDN Community</li>
+                   <li> WDN Forum</li>
+                   <li> WDN Chat</li>
+                </ul>
+            </div>
+            <div class="footer-box developers">
+                <h3>Developers</h3>
+                <ul>
+                   <li> Web Technologies  </li>
+                   <li> Learn Web Development</li>
+                   <li> WDN Plus</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-two">
+            <div class="footer-two-box upper">
+                <h3><span>W/</span>dn</h3>
+              <a href="#">Website Privacy Notice</a>
+              <a href="#">Cookies</a>
+              <a href="#">Legal</a>
+              <a href="#">Community Participation Guidelines</a>
+             </div>
+             <div class="footer-two-box lower">
+                <p>Visit <a href="#">WDN Corporation’s</a> not-for-profit parent, <a href="#">the WDN Foundation</a>.</p>
+                <p>Portions of this content are ©1998–2023 by individual web.org contributors. Content available under a <a href="#">Creative Commons license</a>.</p>
+             </div>
+         
+        </div>
+    </div>
+</div>
+
+<!-- external js file .... -->
+    <script src="wdn.js"></script>
+   
+</body>
+
+</html>
